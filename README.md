@@ -1,2 +1,2 @@
 # Collaborative-System
-Collaborative Information Sharing Sydtem
+Collaborative Information Sharing System
