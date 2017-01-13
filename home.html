@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html>
 <head>
 	<title>Home</title>
@@ -69,8 +69,16 @@
 </div>
 
 
+<!--Slide Show-->
+	<section>
+		<img class="slides" src="img1.jpg" style="width:100%; height: 700px">
+		<img class="slides" src="img3.jpg" style="width:100%; height: 700px">
+		<img class="slides" src="img4.jpg" style="width:100%; height: 700px">
+	</section>
 
 
+
+<!--
 	<div id="section0" class="container-fluid">
 	<div style="margin-top: 150px; margin-left: 315px;">
 		<div style="background-color: black; width: 700px; height: 250px; opacity: 0.5; border-radius: 15px;">
@@ -103,7 +111,7 @@
 	</div>
 	</div>
 
-
+-->
 
 	<div id="section1" class="container-fluid">
 		<div style="margin-left: 30px;">
@@ -298,6 +306,23 @@
 
 		</div>
 
+<script>
+	var index = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("slides");
+		for (i=0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		index++;
+		if(index > x.length) {index = 1}
+	    x[index-1].style.display = "block";
+    	setTimeout(carousel, 3000);		
+	}
+
+</script>
 
 
 </body>
