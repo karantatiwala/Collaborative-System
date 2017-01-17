@@ -88,17 +88,17 @@
   height: 200px;
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  vertical-align: middle;
-  -webkit-transition: opacity 300ms;
+/*  text-align: center;
+  vertical-align: middle;*/
+/*  -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
   -o-transition: opacity 300ms;
-  transition: opacity 300ms;
+  transition: opacity 300ms;*/
 }
 .portfolio-item .overlay .preview {
   position: relative;
   top: 50%;
-  display: inline-block;
+  /*display: inline-block;*/
   margin-top: -20px;
 }
 .portfolio-item:hover .overlay {
