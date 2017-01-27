@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collaborative System</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style_home.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Spinnaker">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ruda">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="bootstrap.css" rel="stylesheet" />
+</head>
+
+<style>
+    .branches:hover{
+     -moz-transform: scale(0.0);
+     -webkit-transform: scale(0.0);
+     transform: scale(1.05);
+     box-shadow: 15px 10px 10px #888888;
+    }
+
+/*SIDEBAR...*/
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+/*  .sidenav1 {padding-top: 15px;}
+  .sidenav1 a {font-size: 18px;*/
+}
+
+/*----------------------*/
+</style>
+
+<body>
+
+
+<div style="">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="home.html" style="font-size: 30px; letter-spacing: 1px; word-spacing: 2px;">CS</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="font-size: 15px; float: right;">
+              <li><a href="home.html#section1"><b>Home</b></a></li>
+              <li><a href="home.html#section2"><b>About Us</b></a></li>
+              <li><a href="home.html#section3"><b>Showcase</b></a></li>
+              <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a> -->
+                <!-- <ul class="dropdown-menu"> -->
+                  <!-- <li><a href="#section41"><b>Login</b></a></li> -->
+                  <li><a href="#section42"><b>Contact Us</b></a></li>
+                <!-- </ul> -->
+              <!-- </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>    
+</div>
+
+
+
+
+<div class="container-fluid showcase" style="padding-top:50px;">
+   <div style="margin-top: 40px;">
+
+        <h1 style="text-align: center; margin-bottom:10px; font-family: Ruda; font-size: 50px; letter-spacing: 6px;" class="year"><b>IIIrd YEAR</b></h1>
+        <hr style="border-top: 2px solid black; margin-top: 10px; width: 190px; margin-bottom: 50px;">
+    
+         <div style="width: 250px; height: 300px; border-radius: 10px; background-color: #2F4F4F; float: left; margin-left: 160px; cursor:pointer;" onclick="openNavCSE()" class="branches">
+         </div>
+
+         <div style="width: 250px; height: 300px; border-radius: 10px; background-color: #2F4F4F; float: right; margin-right: 160px; cursor:pointer;" onclick="openNavECE()" class="branches">
+         </div>
+
+         <div style="width: 250px; height: 300px; border-radius: 10px; background-color: #2F4F4F; float: left; margin-left: 130px; cursor:pointer;" onclick="openNavCCE()" class="branches">
+         </div>
+         
+         <div style="width: 250px; height: 300px; border-radius: 10px; background-color: #2F4F4F; float: left; margin-left: 350px; margin-top: 40px; cursor:pointer;" onclick="openNavME()" class="branches">
+         </div>
+
+         <div style="width: 250px; height: 300px; border-radius: 10px; background-color: #2F4F4F; float: right; margin-right: 350px; margin-top: 40px; cursor:pointer;" onclick="openNavMME()" class="branches">
+         </div>
+         
+   </div>
+</div>
+
+
+<!-- CONTACT SECTION -->
+<div style="margin-top: 100px;">
+<div id="section42" class="container-fluid" style="height:450px;color: #fff; background-color: #2F4F4F;">
+    <div>
+      <div>
+        <h1>Contact Us</h1>
+        <hr style="width: 400px; margin-left: 0px;">
+        <h3><b>Karan Tatiwala</b></h3>
+        <h4><b>Email</b>: karantatiwala@gmail.com</h4>
+        <h4><b>Mo:</b> 9680848615</h4>
+        <h4><b>The LNM Institute Of Information Technology, Jaipur</b></h4>
+      </div>
+
+      <div style=" border-left:1px solid white;"></div>
+
+      <div style="float: right; border-left:1px solid white; height:300px; padding-left: 150px; margin-top: -150px;">
+        <div class="" style="width: 350px; margin-right: 200px; margin-top: -50px; "> 
+          <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email">
+          </div>
+          <div class="form-group">
+            <label for="numb">Mobile No.:</label>
+            <input type="text" class="form-control" id="numb" placeholder="Enter Number">
+          </div>
+          <div class="form-group">
+            <label for="write">Tell Us:</label>
+            <textarea class="form-control" rows="2" id="comment" placeholder="Write Here" style="height: 80px;"></textarea>
+          </div>
+          <a href="#"><button type="submit" class="btn btn-primary">Submit</button></a>
+          </form>
+        </div>
+      </div>
+
+
+
+ 
+    </div>
+
+    <style>
+ 
+    #share-buttons img {
+    width: 50px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+    }
+     
+    </style>
+
+    <div id="share-buttons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=100007447275016">
+          <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+        </a>
+
+          <!-- Twitter -->
+        <a href="#">
+          <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+        </a>
+
+         <!-- LinkedIn -->
+        <a href="#">
+          <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+        </a>
+    </div>
+
+    </div>
+    </div>
+
+
+
+<div id="mySidenavCSE" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>Computer Science Engineering</h2>
+  <a href="" data-toggle="modal" data-target="#myModalcse1">Semester I</a>
+  <a href="" data-toggle="modal" data-target="#myModalcse2">Semester II</a>
+</div>
+
+<div id="mySidenavCCE" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>Communication And Computer Engineering</h2>
+  <a href="" data-toggle="modal" data-target="#myModalcce1">Semester I</a>
+  <a href="" data-toggle="modal" data-target="#myModalcce2">Semester II</a>
+</div>
+
+<div id="mySidenavECE" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>Electronics And Communication Engineering</h2>
+  <a href="" data-toggle="modal" data-target="#myModalece1">Semester I</a>
+  <a href="" data-toggle="modal" data-target="#myModalece2">Semester II</a>
+</div>
+
+<div id="mySidenavME" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>Mechanical Engineering</h2>
+  <a href="" data-toggle="modal" data-target="#myModalme1">Semester I</a>
+  <a href="" data-toggle="modal" data-target="#myModalme2">Semester II</a>
+</div>
+
+<div id="mySidenavMME" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>Mechanical And Mechatronics Engineering</h2>
+  <a href="" data-toggle="modal" data-target="#myModalmme1">Semester I</a>
+  <a href="" data-toggle="modal" data-target="#myModalmme2">Semester II</a>
+</div>
+
+
+<!-- <div id="main">
+  <h1 style="font-size:30px;cursor:pointer" onclick="openNav()">open</h1>
+</div> -->
+
+<script>
+function openNavCSE() {
+    document.getElementById("mySidenavCSE").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+
+function openNavECE() {
+    document.getElementById("mySidenavECE").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function openNavCCE() {
+    document.getElementById("mySidenavCCE").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function openNavME() {
+    document.getElementById("mySidenavME").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function openNavMME() {
+    document.getElementById("mySidenavMME").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenavCSE").style.width = "0";
+    document.getElementById("mySidenavCCE").style.width = "0";
+    document.getElementById("mySidenavECE").style.width = "0";
+    document.getElementById("mySidenavME").style.width = "0";
+    document.getElementById("mySidenavMME").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+
+</script>
+  <!-- Modal -->
+  <div class="modal fade" id="myModalcse1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>cse1</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="myModalcse2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>cse2</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalcce1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>cce1</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalcce2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>cce2</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalece1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>ece1</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalece2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>ece2</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalme1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>me1</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalme2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>me2</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalmme1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>mme1.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalmme2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>mme2.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+
+</body>
+</body>
+</html>
