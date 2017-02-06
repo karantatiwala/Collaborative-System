@@ -1,56 +1,9 @@
-#custom-search-input{
-    padding: 3px;
-    border: solid 1px #E4E4E4;
-    border-radius: 6px;
-    background-color: #fff;
-}
-
-#custom-search-input input{
-    border: 0;
-    box-shadow: none;
-}
-
-#custom-search-input button{
-    margin: 2px 0 0 0;
-    background: none;
-    box-shadow: none;
-    border: 0;
-    color: #666666;
-    padding: 0 8px 0 10px;
-    border-left: solid 1px #ccc;
-}
-
-#custom-search-input button:hover{
-    border: 0;
-    box-shadow: none;
-    border-left: solid 1px #ccc;
-}
-
-#custom-search-input .glyphicon-search{
-    font-size: 23px;
-}
-
-
-
-/*SHOWCASE PRODUCTS*/
-
 .portfolio-items {
   list-style: none;
-/*  padding: 0;
-  margin: 0;*/
 }
-/*.portfolio-items {
-  margin-right: -20px;
-}
-.portfolio-items > li {
-  float: left;
-  padding: 0;
-  margin: 0;
-}*/
 
 .portfolio-items.col-3 > li {
   width: 33%;
-
 }
 
 .portfolio-item .item-main {
@@ -62,23 +15,17 @@
   border:1px solid #E8EAEE;
   
 }
+
 .portfolio-item img {
     border-radius: 10px;
   width: 200px;
   height: 200px;
 }
+
 .portfolio-item .portfolio-image {
   position: relative;
 }
-.portfolio-item h5 {
-  /*margin: 0;*/
-  /*padding: 10px 0 10px 0;*/
-  /*white-space: nowrap;*/
-  /*text-overflow: ellipsis;*/
-  /*overflow: hidden;*/
-  /*background-color: #E91C1C;*/
-/*color: #fff;*/
-}
+
 .portfolio-item .overlay {
     border-radius: 10px;
   position: absolute;
@@ -88,19 +35,16 @@
   height: 200px;
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.9);
-/*  text-align: center;
-  vertical-align: middle;*/
-/*  -webkit-transition: opacity 300ms;
-  -moz-transition: opacity 300ms;
-  -o-transition: opacity 300ms;
-  transition: opacity 300ms;*/
+
 }
+
 .portfolio-item .overlay .preview {
   position: relative;
   top: 50%;
   /*display: inline-block;*/
   margin-top: -20px;
 }
+
 .portfolio-item:hover .overlay {
   opacity: 0.7;
 }
